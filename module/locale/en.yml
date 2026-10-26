@@ -1,0 +1,49 @@
+patrol_group: Patrol troops
+patrol_group_descr: |
+  The AI's attack patrol troops (AttUnitPatrol in the AI file). Normally only the first patrol
+  group ever moves; the second one stands at the rally point for the whole attack.
+patrol_enabled: Give every patrol group its own route
+patrol_enabled_tooltip: |
+  Group 1 circles the castle one way, group 2 the other way, group 3 runs back and forth along
+  the front (the side facing the attacker's castle). Groups 4, 5 and 6 do the same as 1, 2 and
+  3, a quarter circle behind them, and so on.
+patrol_groups: Number of patrol groups
+patrol_groups_tooltip: |
+  0 uses what the AI's own file says. The game can't handle more than 2 by itself; this
+  module can (up to 12).
+patrol_distance: Distance from the castle (tiles)
+patrol_distance_tooltip: |
+  How far outside the castle the patrols walk, counted as walking distance (round walls and
+  moats). 12 is what the game's own patrol uses.
+
+siegedef_group: Siege defence troops
+siegedef_group_descr: |
+  The troops that guard the AI's siege engines (AttUnitSiegeDef in the AI file). They walk from
+  one siege engine to the next and attack once the wall assault starts.
+siegedef_enabled: Split siege defence into more groups
+siegedef_enabled_tooltip: |
+  Each group starts at a different siege engine and every second group walks the other way, so
+  they spread out over all the engines instead of moving as one blob.
+siegedef_groups: Number of siege defence groups
+siegedef_groups_tooltip: |
+  0 uses what the AI's own file says. The game can't handle more than 2 by itself; this
+  module can (up to 12).
+siegedef_forward: Melee groups walk this far in front of the engines (tiles)
+siegedef_forward_tooltip: |
+  Groups that are mostly melee troops stand this many tiles closer to the castle than the
+  engines, so the defenders shoot at them instead of the engines. Archers and other ranged
+  groups stay at the engines. 0 keeps every group at the engines.
+
+general_group: Groups
+general_group_descr: |
+  Applies to both kinds of troop.
+general_min_size: Smallest group (units)
+general_min_size_tooltip: |
+  A troop is only split as far as every group still gets at least this many units.
+
+diagnostics_group: Diagnostics
+diagnostics_group_descr: |
+  For testing.
+diagnostics_log: Write what the groups do to the log
+diagnostics_log_tooltip: |
+  Writes a line to ucp3.log when troops are split into groups or put back together.
